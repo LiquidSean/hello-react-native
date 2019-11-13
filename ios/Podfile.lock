@@ -182,6 +182,12 @@ PODS:
     - React-cxxreact (= 0.61.4)
     - React-jsi (= 0.61.4)
   - React-jsinspector (0.61.4)
+  - react-native-ble-plx (1.1.0):
+    - React
+    - react-native-ble-plx-swift
+  - react-native-ble-plx-swift (1.1.0)
+  - react-native-netinfo (4.6.0):
+    - React
   - React-RCTActionSheet (0.61.4):
     - React-Core/RCTActionSheetHeaders (= 0.61.4)
   - React-RCTAnimation (0.61.4):
@@ -217,6 +223,19 @@ PODS:
     - React-cxxreact (= 0.61.4)
     - React-jsi (= 0.61.4)
     - ReactCommon/jscallinvoker (= 0.61.4)
+  - RNCAsyncStorage (1.6.2):
+    - React
+  - RNGestureHandler (1.5.0):
+    - React
+  - RNSound (0.11.0):
+    - React
+    - RNSound/Core (= 0.11.0)
+  - RNSound/Core (0.11.0):
+    - React
+  - RNSVG (9.13.3):
+    - React
+  - RNVectorIcons (6.6.0):
+    - React
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -236,6 +255,9 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-ble-plx (from `../node_modules/react-native-ble-plx`)
+  - react-native-ble-plx-swift (from `../node_modules/react-native-ble-plx`)
+  - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo/react-native-netinfo.podspec`)"
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -247,10 +269,15 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/jscallinvoker (from `../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage/RNCAsyncStorage.podspec`)"
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler/RNGestureHandler.podspec`)
+  - RNSound (from `../node_modules/react-native-sound/RNSound.podspec`)
+  - RNSVG (from `../node_modules/react-native-svg/RNSVG.podspec`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons/RNVectorIcons.podspec`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - boost-for-react-native
 
 EXTERNAL SOURCES:
@@ -282,6 +309,12 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-ble-plx:
+    :path: "../node_modules/react-native-ble-plx"
+  react-native-ble-plx-swift:
+    :path: "../node_modules/react-native-ble-plx"
+  react-native-netinfo:
+    :podspec: "../node_modules/@react-native-community/netinfo/react-native-netinfo.podspec"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -302,6 +335,16 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNCAsyncStorage:
+    :podspec: "../node_modules/@react-native-community/async-storage/RNCAsyncStorage.podspec"
+  RNGestureHandler:
+    :podspec: "../node_modules/react-native-gesture-handler/RNGestureHandler.podspec"
+  RNSound:
+    :podspec: "../node_modules/react-native-sound/RNSound.podspec"
+  RNSVG:
+    :podspec: "../node_modules/react-native-svg/RNSVG.podspec"
+  RNVectorIcons:
+    :podspec: "../node_modules/react-native-vector-icons/RNVectorIcons.podspec"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -321,6 +364,9 @@ SPEC CHECKSUMS:
   React-jsi: ca921f4041505f9d5197139b2d09eeb020bb12e8
   React-jsiexecutor: 8dfb73b987afa9324e4009bdce62a18ce23d983c
   React-jsinspector: d15478d0a8ada19864aa4d1cc1c697b41b3fa92f
+  react-native-ble-plx: 05e16667ebf56cf802986379fd58a377847885e8
+  react-native-ble-plx-swift: e0d041529bd7ae66eb9731123eca3df3d132e8ec
+  react-native-netinfo: bd4c115afdf0821b8ddb6c59ef3ddc5f0a7e8ad0
   React-RCTActionSheet: 7369b7c85f99b6299491333affd9f01f5a130c22
   React-RCTAnimation: d07be15b2bd1d06d89417eb0343f98ffd2b099a7
   React-RCTBlob: 8e0b23d95c9baa98f6b0e127e07666aaafd96c34
@@ -331,8 +377,13 @@ SPEC CHECKSUMS:
   React-RCTText: 21934e0a51d522abcd0a275407e80af45d6fd9ec
   React-RCTVibration: 0f76400ee3cec6edb9c125da49fed279340d145a
   ReactCommon: a6a294e7028ed67b926d29551aa9394fd989c24c
+  RNCAsyncStorage: 5ae4d57458804e99f73d427214442a6b10a53856
+  RNGestureHandler: a4ddde1ffc6e590c8127b8b7eabfdade45475c74
+  RNSound: c980916b596cc15c8dcd2f6ecd3b13c4881dbe20
+  RNSVG: f6177f8d7c095fada7cfee2e4bb7388ba426064c
+  RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   Yoga: ba3d99dbee6c15ea6bbe3783d1f0cb1ffb79af0f
 
-PODFILE CHECKSUM: 75a81cbd3e9c35642a16b0d6d2339a963fb66bc5
+PODFILE CHECKSUM: f226d52a4b2d87187d04aaaee3b0eaaa2db58f0d
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.8.4
